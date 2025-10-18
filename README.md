@@ -53,19 +53,19 @@ Runs on http://localhost:3000
 
 ## Project Structure
 
-ticket-resale-app/
-├── backend/
-│ ├── app.py
-│ ├── models/
-│ ├── routes/
-│ ├── utils/
-│ └── database/schema.sql
-├── frontend/
-│ ├── src/
-│ │ ├── pages/
-│ │ ├── components/
-│ │ └── services/
-└── README.md
+    ticket-resale-app/
+    ├── backend/
+    │   ├── app.py
+    │   ├── models/
+    │   ├── routes/
+    │   ├── utils/
+    │   └── database/schema.sql
+    ├── frontend/
+    │   ├── src/
+    │   │   ├── pages/
+    │   │   ├── components/
+    │   │   └── services/
+    └── README.md
 
 ## Authentication
 
