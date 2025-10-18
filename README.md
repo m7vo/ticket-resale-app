@@ -14,9 +14,10 @@ A peer-to-peer marketplace where fans can buy and sell concert tickets securely 
 ## Tech Stack
 
 Backend: FastAPI, PostgreSQL, SQLAlchemy, JWT
+
 Frontend: React, Axios, React Router
+
 Deployment: Docker
-Planned: WebSockets for real-time updates
 
 ## Setup
 
@@ -26,18 +27,26 @@ cd ticket-resale-app
 
 ### 2. Backend
 python -m venv venv
+
 source venv/bin/activate  # Windows: venv\\Scripts\\activate
+
 cd backend
+
 pip install -r requirements.txt
+
 cp ../.env.example ../.env  # Edit with DB credentials
+
 psql -U postgres -d ticket_app -f database/schema.sql
+
 python app.py
 
 Runs on http://localhost:8000
 
 ### 3. Frontend
 cd frontend
+
 npm install
+
 npm start
 
 Runs on http://localhost:3000
@@ -46,16 +55,16 @@ Runs on http://localhost:3000
 
 ticket-resale-app/
 ├── backend/
-│   ├── app.py
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   └── database/schema.sql
+│ ├── app.py
+│ ├── models/
+│ ├── routes/
+│ ├── utils/
+│ └── database/schema.sql
 ├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   ├── components/
-│   │   └── services/
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ └── services/
 └── README.md
 
 ## Authentication
