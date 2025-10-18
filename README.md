@@ -32,13 +32,15 @@ pip install -r requirements.txt
 cp ../.env.example ../.env  # Edit with DB credentials
 psql -U postgres -d ticket_app -f database/schema.sql
 python app.py
-# Runs on http://localhost:8000
+
+Runs on http://localhost:8000
 
 ### 3. Frontend
 cd frontend
 npm install
 npm start
-# Runs on http://localhost:3000
+
+Runs on http://localhost:3000
 
 ## Project Structure
 
