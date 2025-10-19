@@ -26,6 +26,7 @@ from contextlib import contextmanager
 import uvicorn
 import os
 from dotenv import load_dotenv
+from routes.auth import router as auth_router
 
 # Load environment variables from .env file
 load_dotenv()
@@ -141,15 +142,15 @@ def health_check():
 
 # Uncomment these as you create the route files
 
-# from routes.auth import router as auth_router
-# from routes.listings import router as listings_router
-# from routes.messages import router as messages_router
-# from routes.users import router as users_router
+from routes.auth import router as auth_router
+from routes.listings import router as listings_router
+from routes.messages import router as messages_router
+from routes.users import router as users_router
 
-# app.include_router(auth_router, prefix="/api/auth", tags=["Authentication"])
-# app.include_router(listings_router, prefix="/api/listings", tags=["Listings"])
-# app.include_router(messages_router, prefix="/api/messages", tags=["Messages"])
-# app.include_router(users_router, prefix="/api/users", tags=["Users"])
+app.include_router(auth_router, prefix="/api/auth", tags=["Authentication"])
+app.include_router(listings_router, prefix="/api/listings", tags=["Listings"])
+app.include_router(messages_router, prefix="/api/messages", tags=["Messages"])
+app.include_router(users_router, prefix="/api/users", tags=["Users"])
 
 # ============================================================================
 # RUN SERVER
